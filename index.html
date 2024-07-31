@@ -18,6 +18,17 @@
     <link rel="stylesheet" href="dist/styles/main.css">
     <link rel="stylesheet" href="dist/styles/style.css">
 
+    <style>
+        .home-bg #dotsCanvas{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+    </style>
+
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144274538-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -26,7 +37,7 @@
 
         gtag('config', 'UA-144274538-1');
     </script>
-    <script>
+    <!-- <script>
         var balls = document.getElementsByClassName("ball");
   document.onmousemove = function(){
     var x = event.clientX * 100 / window.innerWidth + "%";
@@ -38,7 +49,7 @@
       balls[i].style.transform = "translate(-"+x+",-"+y+")";
     }
   }
-    </script>
+    </script> -->
 </head>
 
 <body>
@@ -63,15 +74,6 @@
     </div>
 
     <div class="o-scrolll-h home-bg" id="js-scroll" data-scroll-container>
-        <!-- <nav class="nav">
-            <ul>
-                <li><a href="index.html" class="a link">Home</a></li>
-                <li><a href="about.html" class="a link">About</a></li>
-                <li><a href="project.html" class="a link">Project</a></li>
-                <li><a href="#" class="c link">Contact</a></li>
-            </ul>
-            <div class="underline"></div>
-        </nav> -->
         <nav class="nav">
             <div class="links">
                 <a href="index.html" class="a link">Home</a>
@@ -86,7 +88,7 @@
             <div id="myMenu"></div>
         </div>
 
-        <div class="eye-holder">
+        <!-- <div class="eye-holder">
             <div class="eyes">
                 <div class="eye">
                     <div class="ball">
@@ -99,8 +101,10 @@
                     </div>
                 </div>
             </div>
+        </div> -->
 
-
+        <!-- canvas dots -->
+        <canvas id="dotsCanvas"></canvas>
 
             <div data-scroll-section>
                 <div class="o-container oh-container">
@@ -205,6 +209,7 @@
         <script src='dist/scripts/particles.min.js'></script>
         <script src='dist/scripts/app.js'></script>
         <script src="dist/scripts/index.js"></script>
+        <script src="./dist/scripts/canvas.js"></script>
 </body>
 
 </html>
